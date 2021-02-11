@@ -1,25 +1,19 @@
 import {Command, flags} from '@oclif/command'
 
-export default class Account extends Command {
-  static description = 'Account API'
+export default class AccountDomain extends Command {
+  static description = `Returns bandwidth usage for all visible domain services
+Bandwidth usage is counted from the beginning of the
+current billing cycle (which, itself, can be determined
+by using account:status).
+`
 
   static flags = {
     help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
   }
 
-  static args = [{name: 'file'}]
-
   async run() {
-    const {args, flags} = this.parse(Account)
+    // const {args, flags} = this.parse(AccountDomain)
 
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from ${__filename}`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
-    }
+    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
   }
 }

@@ -1,7 +1,7 @@
 import {Command, flags} from '@oclif/command'
 
-export default class User extends Command {
-  static description = 'User API'
+export default class UserList extends Command {
+  static description = 'user:list'
 
   static flags = {
     help: flags.help({char: 'h'}),
@@ -11,15 +11,9 @@ export default class User extends Command {
     force: flags.boolean({char: 'f'}),
   }
 
-  static args = [{name: 'file'}]
-
   async run() {
-    const {args, flags} = this.parse(User)
+    // const {args, flags} = this.parse(DnsIndex)
 
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from ${__filename}`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
-    }
+    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
   }
 }

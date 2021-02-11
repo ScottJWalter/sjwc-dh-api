@@ -1,11 +1,14 @@
 import {Command, flags} from '@oclif/command'
 
 export default class Hello extends Command {
-  static description = 'describe the command here'
+  static description = `this line always shows up here
+This line shows up here.
+testing, one, two three ...
+`
 
   static examples = [
     `$ dh-api hello
-hello world from ./src/hello.ts!
+hello world from ${__filename.replace(process.cwd(), '..')}
 `,
   ]
 
@@ -17,13 +20,19 @@ hello world from ./src/hello.ts!
     force: flags.boolean({char: 'f'}),
   }
 
-  static args = [{name: 'file'}]
+  static args = [
+    {
+      name: 'string',
+      description: 'optional string to echo back',
+      default: 'world',
+    }
+  ]
 
   async run() {
     const {args, flags} = this.parse(Hello)
 
     const name = flags.name ?? 'world'
-    this.log(`hello ${name} from ./src/commands/hello.ts`)
+    this.log(`hello ${name} from ${__filename.replace(process.cwd(), '..')}`)
     if (args.file && flags.force) {
       this.log(`you input --force and --file: ${args.file}`)
     }
