@@ -108,9 +108,9 @@
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md",
-    "gh-pages": "oclif-dev readme && cp README.md docs/index.md",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "gh-pages": "cp README.md docs/index.md",
+    "predeploy": "npm run prepack && cp README.md docs/index.md && npm run postpack",
+    "deploy": "gh-pages -d docs"
   },
   "types": "lib/index.d.ts"
 }
