@@ -10,6 +10,6 @@ export default class JabberIndex extends Command {
   async run() {
     // const {args, flags} = this.parse(DnsIndex)
 
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
+    this.log('Jabber module help goes here.')
   }
 }

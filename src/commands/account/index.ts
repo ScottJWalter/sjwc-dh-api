@@ -13,6 +13,6 @@ status of your account.
   async run() {
     // const {args, flags} = this.parse(AccountIndex)
 
-    this.log('Account help goes here.')
+    this.log('Account module help goes here.')
   }
 }

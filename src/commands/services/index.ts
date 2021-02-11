@@ -10,6 +10,6 @@ export default class ServicesIndex extends Command {
   async run() {
     // const {args, flags} = this.parse(DnsIndex)
 
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
+    this.log('Services module help goes here.')
   }
 }

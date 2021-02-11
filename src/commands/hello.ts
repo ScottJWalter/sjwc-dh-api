@@ -25,7 +25,7 @@ hello world from ${__filename.replace(process.cwd(), '..')}
       name: 'string',
       description: 'optional string to echo back',
       default: 'world',
-    }
+    },
   ]
 
   async run() {

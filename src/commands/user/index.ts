@@ -10,6 +10,6 @@ export default class UserIndex extends Command {
   async run() {
     // const {args, flags} = this.parse(DnsIndex)
 
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
+    this.log('User module help goes here.')
   }
 }
