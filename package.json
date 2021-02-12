@@ -1,7 +1,7 @@
 {
   "name": "sjwc-dh-api",
   "description": "DreamHost API Command Line Interface",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Scott Walter @ScottJWalter",
   "bin": {
     "dh-api": "./bin/run"
