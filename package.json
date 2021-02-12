@@ -20,7 +20,6 @@
     "@oclif/plugin-which": "^1.0.3",
     "@types/axios": "^0.14.0",
     "ansi-colors": "^4.1.1",
-    "axios": "^0.21.1",
     "cli-table": "^0.3.4",
     "conf-cli": "^0.1.9",
     "enquirer": "^2.3.6",
