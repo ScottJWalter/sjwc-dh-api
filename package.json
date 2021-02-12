@@ -25,7 +25,6 @@
     "enquirer": "^2.3.6",
     "tslib": "^1.14.1",
     "url": "^0.11.0",
-    "urllib": "^2.36.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
