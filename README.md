@@ -4,8 +4,8 @@ sjwc-dh-api
 DreamHost API Command Line Interface
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/sjwc-dh-api.svg)](https://npmjs.org/package/sjwc-dh-api)
 [![Codecov](https://codecov.io/gh/ScottJWalter/sjwc-dh-api/branch/develop/graph/badge.svg)](https://codecov.io/gh/ScottJWalter/sjwc-dh-api)
+[![Version](https://img.shields.io/npm/v/sjwc-dh-api.svg)](https://npmjs.org/package/sjwc-dh-api)
 [![Downloads/week](https://img.shields.io/npm/dw/sjwc-dh-api.svg)](https://npmjs.org/package/sjwc-dh-api)
 [![License](https://img.shields.io/npm/l/sjwc-dh-api.svg)](https://github.com/ScottJWalter/sjwc-dh-api/blob/master/package.json)
 
