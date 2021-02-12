@@ -166,6 +166,16 @@
         "signature": "4576b4e61049f5ffd7c9e935cf88832e089265bdb15ffc35077310042cbbbeea",
         "affectsGlobalScope": false
       },
+      "./node_modules/@types/uuid/index.d.ts": {
+        "version": "96b49a9de749afcf92b5bce1d8cc42cfae6816cdf5ea36584fd9256b8b2e5292",
+        "signature": "96b49a9de749afcf92b5bce1d8cc42cfae6816cdf5ea36584fd9256b8b2e5292",
+        "affectsGlobalScope": false
+      },
+      "./src/config.ts": {
+        "version": "b36ae87261cb940e889165eb3b36adeb10324bb3b7b66959c4f65bb82ec55aef",
+        "signature": "0192186a7a4c4a36f59364074e239ce0a41ec6e5a7c115265d3aee4ce1c4d4e5",
+        "affectsGlobalScope": false
+      },
       "./node_modules/@oclif/parser/lib/args.d.ts": {
         "version": "b8fac2a2a066d140f34e5e0c698440f1f8c8a94eea2c95d156ce821ed53336e2",
         "signature": "b8fac2a2a066d140f34e5e0c698440f1f8c8a94eea2c95d156ce821ed53336e2",
@@ -462,8 +472,8 @@
         "affectsGlobalScope": false
       },
       "./src/commands/meta/commands.ts": {
-        "version": "1686fdcbb0b56f7b80bab1d703e3e6b2fe6ea7fbdeb23fd3b256ef1e31e5a548",
-        "signature": "d00e3ef7460535847c3f9b43cf265b0c3d42321d385ed2c4fa1b7e95704ed080",
+        "version": "1cd26b140dafedade173ca51af7f99cdb34b700300d23fd0cd6b988f311f497b",
+        "signature": "9b3efbe72812b4f690c47a3bbab46919a4d1084ae5d4142efc4d933718d41c60",
         "affectsGlobalScope": false
       },
       "./src/commands/meta/index.ts": {
@@ -925,6 +935,11 @@
         "version": "7b7ad75478fee75f866dd56a74847cd1654338fbb8d09dacea69b38b9b93f36f",
         "signature": "7b7ad75478fee75f866dd56a74847cd1654338fbb8d09dacea69b38b9b93f36f",
         "affectsGlobalScope": false
+      },
+      "./node_modules/@types/uuencode/index.d.ts": {
+        "version": "a1fe7a4b67ede19f6495f150bd02e7e232dc78fba01ea99622e2da7299e9fedb",
+        "signature": "a1fe7a4b67ede19f6495f150bd02e7e232dc78fba01ea99622e2da7299e9fedb",
+        "affectsGlobalScope": false
       }
     },
     "options": {
@@ -1361,6 +1376,9 @@
       "./node_modules/@types/sinon/index.d.ts": [
         "./node_modules/@types/sinonjs__fake-timers/index.d.ts"
       ],
+      "./node_modules/@types/uuencode/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
       "./src/commands/account/domain.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
@@ -1458,7 +1476,9 @@
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
       "./src/commands/meta/commands.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts"
+        "./node_modules/@oclif/command/lib/index.d.ts",
+        "./node_modules/@types/node/https.d.ts",
+        "./src/config.ts"
       ],
       "./src/commands/meta/index.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
@@ -1540,6 +1560,9 @@
       ],
       "./src/commands/user/remove.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
+      "./src/config.ts": [
+        "./node_modules/@types/uuid/index.d.ts"
       ],
       "./src/index.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
@@ -1967,6 +1990,9 @@
       "./node_modules/@types/sinon/index.d.ts": [
         "./node_modules/@types/sinonjs__fake-timers/index.d.ts"
       ],
+      "./node_modules/@types/uuencode/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
       "./src/commands/account/domain.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
         "./node_modules/@oclif/parser/lib/flags.d.ts"
@@ -2096,8 +2122,7 @@
         "./node_modules/@oclif/parser/lib/flags.d.ts"
       ],
       "./src/commands/meta/commands.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts",
-        "./node_modules/@oclif/parser/lib/flags.d.ts"
+        "./node_modules/@oclif/command/lib/index.d.ts"
       ],
       "./src/commands/meta/index.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
@@ -2303,6 +2328,8 @@
       "./node_modules/@types/semver/index.d.ts",
       "./node_modules/@types/sinon/index.d.ts",
       "./node_modules/@types/sinonjs__fake-timers/index.d.ts",
+      "./node_modules/@types/uuencode/index.d.ts",
+      "./node_modules/@types/uuid/index.d.ts",
       "./node_modules/tslib/tslib.d.ts",
       "./node_modules/typescript/lib/lib.dom.d.ts",
       "./node_modules/typescript/lib/lib.dom.iterable.d.ts",
@@ -2396,6 +2423,7 @@
       "./src/commands/user/index.ts",
       "./src/commands/user/list.ts",
       "./src/commands/user/remove.ts",
+      "./src/config.ts",
       "./src/index.ts"
     ]
   },
