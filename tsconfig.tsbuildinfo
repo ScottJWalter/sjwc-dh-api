@@ -166,16 +166,6 @@
         "signature": "4576b4e61049f5ffd7c9e935cf88832e089265bdb15ffc35077310042cbbbeea",
         "affectsGlobalScope": false
       },
-      "./node_modules/@types/uuid/index.d.ts": {
-        "version": "96b49a9de749afcf92b5bce1d8cc42cfae6816cdf5ea36584fd9256b8b2e5292",
-        "signature": "96b49a9de749afcf92b5bce1d8cc42cfae6816cdf5ea36584fd9256b8b2e5292",
-        "affectsGlobalScope": false
-      },
-      "./src/config.ts": {
-        "version": "b36ae87261cb940e889165eb3b36adeb10324bb3b7b66959c4f65bb82ec55aef",
-        "signature": "0192186a7a4c4a36f59364074e239ce0a41ec6e5a7c115265d3aee4ce1c4d4e5",
-        "affectsGlobalScope": false
-      },
       "./node_modules/@oclif/parser/lib/args.d.ts": {
         "version": "b8fac2a2a066d140f34e5e0c698440f1f8c8a94eea2c95d156ce821ed53336e2",
         "signature": "b8fac2a2a066d140f34e5e0c698440f1f8c8a94eea2c95d156ce821ed53336e2",
@@ -304,6 +294,21 @@
       "./node_modules/@oclif/command/lib/index.d.ts": {
         "version": "778d7164f3612aad776e12987f46889f3fe3541e5d9aed5f673daed728b643d5",
         "signature": "778d7164f3612aad776e12987f46889f3fe3541e5d9aed5f673daed728b643d5",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/uuid/index.d.ts": {
+        "version": "96b49a9de749afcf92b5bce1d8cc42cfae6816cdf5ea36584fd9256b8b2e5292",
+        "signature": "96b49a9de749afcf92b5bce1d8cc42cfae6816cdf5ea36584fd9256b8b2e5292",
+        "affectsGlobalScope": false
+      },
+      "./src/config.ts": {
+        "version": "b36ae87261cb940e889165eb3b36adeb10324bb3b7b66959c4f65bb82ec55aef",
+        "signature": "0192186a7a4c4a36f59364074e239ce0a41ec6e5a7c115265d3aee4ce1c4d4e5",
+        "affectsGlobalScope": false
+      },
+      "./src/base.ts": {
+        "version": "df6c2326c03e1b7397f09cf787e0ded3273fdd7de85e9bf7b5d5df2e3442180e",
+        "signature": "d17a4db824448a42fe17e63989ae77419b7b541bcb0a2887dfca1828cc385530",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
@@ -472,18 +477,18 @@
         "affectsGlobalScope": false
       },
       "./src/commands/meta/commands.ts": {
-        "version": "1cd26b140dafedade173ca51af7f99cdb34b700300d23fd0cd6b988f311f497b",
-        "signature": "9b3efbe72812b4f690c47a3bbab46919a4d1084ae5d4142efc4d933718d41c60",
+        "version": "950ac963cea04f93344dd509d187aea06fe9b5926b5145c21e5072420a65d5ce",
+        "signature": "265067664675d54ba3ce80efbf4a8242967763126ae3d260e6189aa5539e0aa4",
         "affectsGlobalScope": false
       },
       "./src/commands/meta/index.ts": {
-        "version": "cacf765eccfb370bc820cfeac73cb17521a46eb6402aad3a26d43a0c0884fe1a",
-        "signature": "9344b606055d7d6999d647428530a6408a01eda6cb1352b905a868d0a4050187",
+        "version": "0303e070fd40d60a95bd961c82438dc0f43a6121931cbe706968500b8b57fc79",
+        "signature": "2c6a7bbab895d797bd2cc4788be41f2d9d807b9ef0862d339a041320ef4fdc7c",
         "affectsGlobalScope": false
       },
       "./src/commands/meta/keys.ts": {
-        "version": "0bc003f9f73d8e240b47ee1641fe9896a4525bf2a6d03fba6a6e7bf7f60499a3",
-        "signature": "add3c15a79b6adb1394882a0228d9ec791e29295155b999849249cc6a14240b1",
+        "version": "0a666800e38aea9e2af773bb3623c9538cddd14fab6a1ac7df62ec4ea0cc1a25",
+        "signature": "cefff0406756627051f146e95d4f3972f891c8cc5235f8576e9546a7e5749546",
         "affectsGlobalScope": false
       },
       "./src/commands/mysql/index.ts": {
@@ -1379,6 +1384,11 @@
       "./node_modules/@types/uuencode/index.d.ts": [
         "./node_modules/@types/node/index.d.ts"
       ],
+      "./src/base.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts",
+        "./node_modules/@types/node/https.d.ts",
+        "./src/config.ts"
+      ],
       "./src/commands/account/domain.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
@@ -1476,15 +1486,13 @@
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
       "./src/commands/meta/commands.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts",
-        "./node_modules/@types/node/https.d.ts",
-        "./src/config.ts"
+        "./src/base.ts"
       ],
       "./src/commands/meta/index.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts"
+        "./src/base.ts"
       ],
       "./src/commands/meta/keys.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts"
+        "./src/base.ts"
       ],
       "./src/commands/mysql/host/add.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
@@ -1993,6 +2001,9 @@
       "./node_modules/@types/uuencode/index.d.ts": [
         "./node_modules/@types/node/index.d.ts"
       ],
+      "./src/base.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
       "./src/commands/account/domain.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
         "./node_modules/@oclif/parser/lib/flags.d.ts"
@@ -2122,15 +2133,17 @@
         "./node_modules/@oclif/parser/lib/flags.d.ts"
       ],
       "./src/commands/meta/commands.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts"
+        "./node_modules/@oclif/command/lib/flags.d.ts",
+        "./node_modules/@oclif/parser/lib/index.d.ts",
+        "./src/base.ts"
       ],
       "./src/commands/meta/index.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts",
-        "./node_modules/@oclif/parser/lib/flags.d.ts"
+        "./src/base.ts"
       ],
       "./src/commands/meta/keys.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts",
-        "./node_modules/@oclif/parser/lib/flags.d.ts"
+        "./node_modules/@oclif/command/lib/flags.d.ts",
+        "./node_modules/@oclif/parser/lib/index.d.ts",
+        "./src/base.ts"
       ],
       "./src/commands/mysql/host/add.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
@@ -2363,6 +2376,7 @@
       "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "./node_modules/typescript/lib/lib.scripthost.d.ts",
       "./node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "./src/base.ts",
       "./src/commands/account/domain.ts",
       "./src/commands/account/index.ts",
       "./src/commands/account/keys.ts",

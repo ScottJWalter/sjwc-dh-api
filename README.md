@@ -639,7 +639,8 @@ USAGE
   $ dh-api meta
 
 OPTIONS
-  -h, --help  show CLI help
+  -a, --account=account  account to use
+  -f, --format=format    format to return
 ```
 
 _See code: [src/commands/meta/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/meta/index.ts)_
@@ -668,9 +669,8 @@ USAGE
   $ dh-api meta:keys
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -a, --account=account  account to use
+  -f, --format=format    format to return
 ```
 
 _See code: [src/commands/meta/keys.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/meta/keys.ts)_
