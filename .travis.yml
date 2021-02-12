@@ -12,4 +12,4 @@ script:
 
 after_success:
   - ./node_modules/.bin/nyc --extension .ts report --reporter text-lcov > coverage.lcov
-  - curl -s https://codecov.io/bash | bash
+  - curl -sL https://codecov.io/bash | bash
