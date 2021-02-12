@@ -301,6 +301,11 @@
         "signature": "04b2123e996b5c865eec449a1c670c10cee24d12b9f1a97979c0dbbceecc3384",
         "affectsGlobalScope": false
       },
+      "./src/commands/config.ts": {
+        "version": "d0f11b100a3ee71b676aa44d1b78d942575a80ba9b045d8ef753d07dd5fd3eb1",
+        "signature": "0f886f2e40ee55ca77a289b715afa9aa93e4670d6a0f017aef7c05999402a033",
+        "affectsGlobalScope": false
+      },
       "./src/commands/hello.ts": {
         "version": "5f4a9e44018aa8c82db874e61589351d06b6feb89f4411d53ea9c47662fdbd25",
         "signature": "6fb0b5864a63485c63040cdc46cba3fe7bc02cf72515be64578f8f6964349022",
@@ -931,6 +936,7 @@
       "strict": true,
       "target": 4,
       "composite": true,
+      "sourceMap": true,
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
@@ -1368,6 +1374,9 @@
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
       "./src/commands/account/user.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
+      "./src/commands/config.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
       "./src/commands/dns/add.ts": [
@@ -1978,6 +1987,10 @@
         "./node_modules/@oclif/command/lib/index.d.ts",
         "./node_modules/@oclif/parser/lib/flags.d.ts"
       ],
+      "./src/commands/config.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts",
+        "./node_modules/@oclif/parser/lib/flags.d.ts"
+      ],
       "./src/commands/dns/add.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
         "./node_modules/@oclif/parser/lib/flags.d.ts"
@@ -2328,6 +2341,7 @@
       "./src/commands/account/keys.ts",
       "./src/commands/account/status.ts",
       "./src/commands/account/user.ts",
+      "./src/commands/config.ts",
       "./src/commands/dns/add.ts",
       "./src/commands/dns/index.ts",
       "./src/commands/dns/list.ts",
