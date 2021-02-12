@@ -1,11 +1,8 @@
-sjwc-dh-api
-===========
-
 DreamHost API Command Line Interface
-
+===========
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![Codecov](https://codecov.io/gh/ScottJWalter/sjwc-dh-api/branch/develop/graph/badge.svg)](https://codecov.io/gh/ScottJWalter/sjwc-dh-api)
 [![Version](https://img.shields.io/npm/v/sjwc-dh-api.svg)](https://npmjs.org/package/sjwc-dh-api)
-[![Codecov](https://codecov.io/gh/ScottJWalter/sjwc-dh-api/branch/master/graph/badge.svg)](https://codecov.io/gh/ScottJWalter/sjwc-dh-api)
 [![Downloads/week](https://img.shields.io/npm/dw/sjwc-dh-api.svg)](https://npmjs.org/package/sjwc-dh-api)
 [![License](https://img.shields.io/npm/l/sjwc-dh-api.svg)](https://github.com/ScottJWalter/sjwc-dh-api/blob/master/package.json)
 
@@ -34,6 +31,7 @@ USAGE
 * [`dh-api account:keys`](#dh-api-accountkeys)
 * [`dh-api account:status`](#dh-api-accountstatus)
 * [`dh-api account:user`](#dh-api-accountuser)
+* [`dh-api config`](#dh-api-config)
 * [`dh-api dns`](#dh-api-dns)
 * [`dh-api dns:add`](#dh-api-dnsadd)
 * [`dh-api dns:list`](#dh-api-dnslist)
@@ -182,6 +180,20 @@ DESCRIPTION
 ```
 
 _See code: [src/commands/account/user.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/account/user.ts)_
+
+## `dh-api config`
+
+configure the CLI
+
+```
+USAGE
+  $ dh-api config
+
+OPTIONS
+  -h, --help  show CLI help
+```
+
+_See code: [src/commands/config.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/config.ts)_
 
 ## `dh-api dns`
 
