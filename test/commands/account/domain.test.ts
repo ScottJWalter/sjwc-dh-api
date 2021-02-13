@@ -1,8 +1,8 @@
 import {test} from '@oclif/test'
 
-describe('domain:registrations', () => {
+describe('account:domain', () => {
   test
     .stdout()
-    .command(['domain:registrations'])
+    .command(['account:domain'])
     .it('needs to be written')
 })

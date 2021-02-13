@@ -1,8 +1,8 @@
 import {test} from '@oclif/test'
 
-describe('mysql:user:list', () => {
+describe('mysql:user:add', () => {
   test
-  .stdout()
-  .command(['mysql:user:list'])
-  .it('needs to be written')
+    .stdout()
+    .command(['mysql:user:add'])
+    .it('needs to be written')
 })
