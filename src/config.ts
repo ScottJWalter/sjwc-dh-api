@@ -18,8 +18,8 @@ interface stringParams {
 type queryParams = requiredParams & optionalParams
 
 interface commonParams {
-  account: flags.IOptionFlag<string | undefined>,
-  format: flags.IOptionFlag<string | undefined>,
+  account?: flags.IOptionFlag<string | undefined>,
+  format?: flags.IOptionFlag<string | undefined>,
 }
 
 export {commonParams, requiredParams, optionalParams, queryParams, stringParams}

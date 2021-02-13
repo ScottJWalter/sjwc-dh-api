@@ -1,15 +1,14 @@
-import {Command, flags} from '@oclif/command'
+import Command from '../../base'
 
 export default class ServicesIndex extends Command {
   static description = 'Service Control API'
 
-  static flags = {
-    help: flags.help({char: 'h'}),
-  }
+  static flags = {}
+
+  parse_flags(): any {return {}}
+  get_cmd(): string {return ''}
 
   async run() {
-    // const {args, flags} = this.parse(DnsIndex)
-
     this.log('Services module help goes here.')
   }
 }

@@ -1,5 +1,5 @@
-import {flags} from '@oclif/command'
 import Command from '../../base'
+import {flags} from '@oclif/command'
 
 export default class ServicesProgress extends Command {
   static description = 'services:progress'
