@@ -1,7 +1,5 @@
 import Command from '../../base'
 
-// import {table} from 'console'
-
 export class MetaCommands extends Command {
   static description = 'meta:commands'
 
@@ -11,6 +9,11 @@ export class MetaCommands extends Command {
     ...Command.flags
   }
 
-  parse_flags() { return this.parse(MetaCommands) }
-  get_cmd() { return this.cmd }
+  parse_flags() {
+    return this.parse(MetaCommands)
+  }
+
+  get_cmd() {
+    return this.cmd
+  }
 }
