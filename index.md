@@ -18,7 +18,7 @@ $ npm install -g sjwc-dh-api
 $ dh-api COMMAND
 running command...
 $ dh-api (-v|--version|version)
-sjwc-dh-api/0.0.1 linux-x64 node-v12.16.3
+sjwc-dh-api/0.0.2 linux-x64 node-v12.16.3
 $ dh-api --help [COMMAND]
 USAGE
   $ dh-api COMMAND
@@ -105,7 +105,7 @@ DESCRIPTION
   status of your account.
 ```
 
-_See code: [src/commands/account/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/account/index.ts)_
+_See code: [src/commands/account/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/account/index.ts)_
 
 ## `dh-api account:domain`
 
@@ -116,7 +116,8 @@ USAGE
   $ dh-api account:domain
 
 OPTIONS
-  -h, --help  show CLI help
+  -a, --account=account  account to use
+  -f, --format=format    format to return
 
 DESCRIPTION
   Bandwidth usage is counted from the beginning of the
@@ -124,7 +125,7 @@ DESCRIPTION
   by using account:status).
 ```
 
-_See code: [src/commands/account/domain.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/account/domain.ts)_
+_See code: [src/commands/account/domain.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/account/domain.ts)_
 
 ## `dh-api account:keys`
 
@@ -135,7 +136,8 @@ USAGE
   $ dh-api account:keys
 
 OPTIONS
-  -h, --help  show CLI help
+  -a, --account=account  account to use
+  -f, --format=format    format to return
 
 DESCRIPTION
   Returns a list of all public SSH keys associated with
@@ -145,7 +147,7 @@ DESCRIPTION
          will NOT be able to see them.
 ```
 
-_See code: [src/commands/account/keys.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/account/keys.ts)_
+_See code: [src/commands/account/keys.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/account/keys.ts)_
 
 ## `dh-api account:status`
 
@@ -156,13 +158,14 @@ USAGE
   $ dh-api account:status
 
 OPTIONS
-  -h, --help  show CLI help
+  -a, --account=account  account to use
+  -f, --format=format    format to return
 
 DESCRIPTION
   Returns the current account status (billing).
 ```
 
-_See code: [src/commands/account/status.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/account/status.ts)_
+_See code: [src/commands/account/status.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/account/status.ts)_
 
 ## `dh-api account:user`
 
@@ -173,14 +176,15 @@ USAGE
   $ dh-api account:user
 
 OPTIONS
-  -h, --help  show CLI help
+  -a, --account=account  account to use
+  -f, --format=format    format to return
 
 DESCRIPTION
   For all visible users, this returns information on disk
   and bandwidth usage.
 ```
 
-_See code: [src/commands/account/user.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/account/user.ts)_
+_See code: [src/commands/account/user.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/account/user.ts)_
 
 ## `dh-api config`
 
@@ -194,7 +198,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/config.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/config.ts)_
+_See code: [src/commands/config.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/config.ts)_
 
 ## `dh-api dns`
 
@@ -208,7 +212,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/dns/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/dns/index.ts)_
+_See code: [src/commands/dns/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/dns/index.ts)_
 
 ## `dh-api dns:add`
 
@@ -219,12 +223,11 @@ USAGE
   $ dh-api dns:add
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -a, --account=account  account to use
+  -f, --format=format    format to return
 ```
 
-_See code: [src/commands/dns/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/dns/add.ts)_
+_See code: [src/commands/dns/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/dns/add.ts)_
 
 ## `dh-api dns:list`
 
@@ -240,7 +243,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/dns/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/dns/list.ts)_
+_See code: [src/commands/dns/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/dns/list.ts)_
 
 ## `dh-api dns:remove`
 
@@ -256,7 +259,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/dns/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/dns/remove.ts)_
+_See code: [src/commands/dns/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/dns/remove.ts)_
 
 ## `dh-api domain`
 
@@ -270,7 +273,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/domain/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/domain/index.ts)_
+_See code: [src/commands/domain/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/domain/index.ts)_
 
 ## `dh-api domain:available`
 
@@ -286,7 +289,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/domain/available.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/domain/available.ts)_
+_See code: [src/commands/domain/available.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/domain/available.ts)_
 
 ## `dh-api domain:domains`
 
@@ -302,7 +305,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/domain/domains.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/domain/domains.ts)_
+_See code: [src/commands/domain/domains.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/domain/domains.ts)_
 
 ## `dh-api domain:registrations`
 
@@ -318,7 +321,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/domain/registrations.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/domain/registrations.ts)_
+_See code: [src/commands/domain/registrations.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/domain/registrations.ts)_
 
 ## `dh-api hello [STRING]`
 
@@ -345,7 +348,7 @@ EXAMPLE
   hello world from ../src/commands/hello.ts
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/hello.ts)_
+_See code: [src/commands/hello.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/hello.ts)_
 
 ## `dh-api help [COMMAND]`
 
@@ -376,7 +379,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/jabber/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/jabber/index.ts)_
+_See code: [src/commands/jabber/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/jabber/index.ts)_
 
 ## `dh-api jabber:add`
 
@@ -392,7 +395,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/jabber/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/jabber/add.ts)_
+_See code: [src/commands/jabber/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/jabber/add.ts)_
 
 ## `dh-api jabber:deactivate`
 
@@ -408,7 +411,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/jabber/deactivate.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/jabber/deactivate.ts)_
+_See code: [src/commands/jabber/deactivate.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/jabber/deactivate.ts)_
 
 ## `dh-api jabber:domains`
 
@@ -424,7 +427,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/jabber/domains.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/jabber/domains.ts)_
+_See code: [src/commands/jabber/domains.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/jabber/domains.ts)_
 
 ## `dh-api jabber:reactivate`
 
@@ -440,7 +443,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/jabber/reactivate.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/jabber/reactivate.ts)_
+_See code: [src/commands/jabber/reactivate.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/jabber/reactivate.ts)_
 
 ## `dh-api jabber:remove`
 
@@ -456,7 +459,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/jabber/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/jabber/remove.ts)_
+_See code: [src/commands/jabber/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/jabber/remove.ts)_
 
 ## `dh-api jabber:users`
 
@@ -472,7 +475,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/jabber/users.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/jabber/users.ts)_
+_See code: [src/commands/jabber/users.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/jabber/users.ts)_
 
 ## `dh-api list`
 
@@ -486,7 +489,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/list/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/list/index.ts)_
+_See code: [src/commands/list/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/list/index.ts)_
 
 ## `dh-api list:add`
 
@@ -502,7 +505,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/list/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/list/add.ts)_
+_See code: [src/commands/list/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/list/add.ts)_
 
 ## `dh-api list:lists`
 
@@ -518,7 +521,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/list/lists.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/list/lists.ts)_
+_See code: [src/commands/list/lists.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/list/lists.ts)_
 
 ## `dh-api list:post`
 
@@ -534,7 +537,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/list/post.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/list/post.ts)_
+_See code: [src/commands/list/post.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/list/post.ts)_
 
 ## `dh-api list:remove`
 
@@ -550,7 +553,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/list/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/list/remove.ts)_
+_See code: [src/commands/list/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/list/remove.ts)_
 
 ## `dh-api list:subscribers`
 
@@ -566,7 +569,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/list/subscribers.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/list/subscribers.ts)_
+_See code: [src/commands/list/subscribers.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/list/subscribers.ts)_
 
 ## `dh-api mail`
 
@@ -580,7 +583,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/mail/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mail/index.ts)_
+_See code: [src/commands/mail/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mail/index.ts)_
 
 ## `dh-api mail:add`
 
@@ -596,7 +599,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mail/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mail/add.ts)_
+_See code: [src/commands/mail/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mail/add.ts)_
 
 ## `dh-api mail:list`
 
@@ -612,7 +615,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mail/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mail/list.ts)_
+_See code: [src/commands/mail/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mail/list.ts)_
 
 ## `dh-api mail:remove`
 
@@ -628,7 +631,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mail/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mail/remove.ts)_
+_See code: [src/commands/mail/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mail/remove.ts)_
 
 ## `dh-api meta`
 
@@ -643,7 +646,7 @@ OPTIONS
   -f, --format=format    format to return
 ```
 
-_See code: [src/commands/meta/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/meta/index.ts)_
+_See code: [src/commands/meta/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/meta/index.ts)_
 
 ## `dh-api meta:commands`
 
@@ -658,7 +661,7 @@ OPTIONS
   -f, --format=format    format to return
 ```
 
-_See code: [src/commands/meta/commands.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/meta/commands.ts)_
+_See code: [src/commands/meta/commands.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/meta/commands.ts)_
 
 ## `dh-api meta:keys`
 
@@ -673,7 +676,7 @@ OPTIONS
   -f, --format=format    format to return
 ```
 
-_See code: [src/commands/meta/keys.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/meta/keys.ts)_
+_See code: [src/commands/meta/keys.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/meta/keys.ts)_
 
 ## `dh-api mysql`
 
@@ -687,7 +690,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/mysql/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mysql/index.ts)_
+_See code: [src/commands/mysql/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mysql/index.ts)_
 
 ## `dh-api mysql:host`
 
@@ -701,7 +704,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/mysql/host/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mysql/host/index.ts)_
+_See code: [src/commands/mysql/host/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mysql/host/index.ts)_
 
 ## `dh-api mysql:host:add`
 
@@ -717,7 +720,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mysql/host/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mysql/host/add.ts)_
+_See code: [src/commands/mysql/host/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mysql/host/add.ts)_
 
 ## `dh-api mysql:host:list`
 
@@ -733,7 +736,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mysql/host/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mysql/host/list.ts)_
+_See code: [src/commands/mysql/host/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mysql/host/list.ts)_
 
 ## `dh-api mysql:host:remove`
 
@@ -749,7 +752,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mysql/host/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mysql/host/remove.ts)_
+_See code: [src/commands/mysql/host/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mysql/host/remove.ts)_
 
 ## `dh-api mysql:user`
 
@@ -763,7 +766,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/mysql/user/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mysql/user/index.ts)_
+_See code: [src/commands/mysql/user/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mysql/user/index.ts)_
 
 ## `dh-api mysql:user:add`
 
@@ -779,7 +782,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mysql/user/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mysql/user/add.ts)_
+_See code: [src/commands/mysql/user/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mysql/user/add.ts)_
 
 ## `dh-api mysql:user:list`
 
@@ -795,7 +798,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mysql/user/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mysql/user/list.ts)_
+_See code: [src/commands/mysql/user/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mysql/user/list.ts)_
 
 ## `dh-api mysql:user:remove`
 
@@ -811,7 +814,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/mysql/user/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/mysql/user/remove.ts)_
+_See code: [src/commands/mysql/user/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/mysql/user/remove.ts)_
 
 ## `dh-api rewards`
 
@@ -825,7 +828,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/rewards/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/rewards/index.ts)_
+_See code: [src/commands/rewards/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/rewards/index.ts)_
 
 ## `dh-api rewards:add`
 
@@ -841,7 +844,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/rewards/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/rewards/add.ts)_
+_See code: [src/commands/rewards/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/rewards/add.ts)_
 
 ## `dh-api rewards:details`
 
@@ -857,7 +860,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/rewards/details.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/rewards/details.ts)_
+_See code: [src/commands/rewards/details.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/rewards/details.ts)_
 
 ## `dh-api rewards:disable`
 
@@ -873,7 +876,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/rewards/disable.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/rewards/disable.ts)_
+_See code: [src/commands/rewards/disable.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/rewards/disable.ts)_
 
 ## `dh-api rewards:enable`
 
@@ -889,7 +892,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/rewards/enable.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/rewards/enable.ts)_
+_See code: [src/commands/rewards/enable.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/rewards/enable.ts)_
 
 ## `dh-api rewards:list`
 
@@ -905,7 +908,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/rewards/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/rewards/list.ts)_
+_See code: [src/commands/rewards/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/rewards/list.ts)_
 
 ## `dh-api rewards:log`
 
@@ -921,7 +924,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/rewards/log.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/rewards/log.ts)_
+_See code: [src/commands/rewards/log.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/rewards/log.ts)_
 
 ## `dh-api rewards:remove`
 
@@ -937,7 +940,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/rewards/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/rewards/remove.ts)_
+_See code: [src/commands/rewards/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/rewards/remove.ts)_
 
 ## `dh-api rewards:summary`
 
@@ -953,7 +956,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/rewards/summary.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/rewards/summary.ts)_
+_See code: [src/commands/rewards/summary.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/rewards/summary.ts)_
 
 ## `dh-api services`
 
@@ -967,7 +970,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/services/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/services/index.ts)_
+_See code: [src/commands/services/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/services/index.ts)_
 
 ## `dh-api services:fivencoder`
 
@@ -983,7 +986,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/services/fivencoder.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/services/fivencoder.ts)_
+_See code: [src/commands/services/fivencoder.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/services/fivencoder.ts)_
 
 ## `dh-api services:progress`
 
@@ -999,7 +1002,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/services/progress.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/services/progress.ts)_
+_See code: [src/commands/services/progress.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/services/progress.ts)_
 
 ## `dh-api user`
 
@@ -1013,7 +1016,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/user/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/user/index.ts)_
+_See code: [src/commands/user/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/user/index.ts)_
 
 ## `dh-api user:add`
 
@@ -1029,7 +1032,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/user/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/user/add.ts)_
+_See code: [src/commands/user/add.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/user/add.ts)_
 
 ## `dh-api user:list`
 
@@ -1045,7 +1048,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/user/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/user/list.ts)_
+_See code: [src/commands/user/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/user/list.ts)_
 
 ## `dh-api user:remove`
 
@@ -1061,7 +1064,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/user/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.1/src/commands/user/remove.ts)_
+_See code: [src/commands/user/remove.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/user/remove.ts)_
 <!-- commandsstop -->
 
 ---
