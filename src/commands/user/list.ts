@@ -1,19 +1,19 @@
-import {Command, flags} from '@oclif/command'
+import Command from '../../base'
 
 export default class UserList extends Command {
   static description = 'user:list'
 
+  private cmd = 'user-list_users'
+
   static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
+    ...Command.flags
   }
 
-  async run() {
-    // const {args, flags} = this.parse(DnsIndex)
+  parse_flags() {
+    return this.parse(UserList)
+  }
 
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
+  get_cmd() {
+    return this.cmd
   }
 }
