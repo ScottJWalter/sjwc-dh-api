@@ -327,7 +327,7 @@
         "affectsGlobalScope": false
       },
       "./src/commands/account/domain.ts": {
-        "version": "4005464baf40f7752acc187e4ee214eada9af02e6de1f1e077e0c879f0ab9318",
+        "version": "445e37b6f11f59d22c9f69c2ab23b167eff9e5cb17c236b88574f66a1ff51225",
         "signature": "fed704bb02efb3b2dd5a7f0e5b15ae4e00e246967972e14689a409a78eaa8047",
         "affectsGlobalScope": false
       },
@@ -337,17 +337,17 @@
         "affectsGlobalScope": false
       },
       "./src/commands/account/keys.ts": {
-        "version": "cd428930a7e15a7128c11289e3f397c08ec8881e38965dead500d22296e94f27",
+        "version": "63f1ae716b5f0d954fad3287d0bfea02048ab747a76d389b12b0d4cb4c800145",
         "signature": "f54c4f4eb9ef0bd13161ac7421a0f25c0d8765ede2070fa648a0086dd894d1ba",
         "affectsGlobalScope": false
       },
       "./src/commands/account/status.ts": {
-        "version": "11c47a7bed110dfa5199ce340a9e76952478d04407174d53dc33dc715c07619d",
+        "version": "cc4784108b844541b8405c5718cfc9f6136cc88fc30c185d33fcc156d276dae7",
         "signature": "c8dcf2bc8a60da70e0872c0eb321187472759c5b86a7a8a7435adc1a32a560e8",
         "affectsGlobalScope": false
       },
       "./src/commands/account/user.ts": {
-        "version": "34b8271107c71bbc9774199bb06030a977909619d62c1cb896d0fc09865c3192",
+        "version": "8c55f60c665bbbe17ab309229d5e47c1b6a0e33be2b94513ee4a9cb55de6fdcf",
         "signature": "e1711411390b934a2892f6571df8832a1fdd7c33f7331f5a12a468dd1c8f76b6",
         "affectsGlobalScope": false
       },
