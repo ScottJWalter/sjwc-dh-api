@@ -1,17 +1,21 @@
-import {Command, flags} from '@oclif/command'
+import Command from '../../base'
 
 export default class AccountStatus extends Command {
   static description = `Returns the status of the current account.
 Returns the current account status (billing).
 `
 
+  private cmd = 'account-status'
+
   static flags = {
-    help: flags.help({char: 'h'}),
+    ...Command.flags
   }
 
-  async run() {
-    // const {args, flags} = this.parse(AccountStatus)
+  parse_flags() {
+    return this.parse(AccountStatus)
+  }
 
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
+  get_cmd() {
+    return this.cmd
   }
 }
