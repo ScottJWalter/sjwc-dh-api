@@ -327,8 +327,8 @@
         "affectsGlobalScope": false
       },
       "./src/commands/account/domain.ts": {
-        "version": "8cc38dcd87148d4abb29c67aed0f17627c15ca02dacebbece3f5aec90522dcab",
-        "signature": "e10fa7f35d7f9f58481a95f9356b9993141f0e3efad4b1b94d62888068cbfc6f",
+        "version": "4005464baf40f7752acc187e4ee214eada9af02e6de1f1e077e0c879f0ab9318",
+        "signature": "cb47cb5fd9961cfeaf411c9e204e964f76a8fe899c1717b50171d7266d0a0353",
         "affectsGlobalScope": false
       },
       "./src/commands/account/index.ts": {
@@ -337,23 +337,23 @@
         "affectsGlobalScope": false
       },
       "./src/commands/account/keys.ts": {
-        "version": "30133ca3ebfd2c6f16da1e5eab1bcd64e2eb0dc4d66ef20b60ad19bcf47564e8",
-        "signature": "3d8c49b4b75973b2f941bf0d43acc527b6e8c31faafbcc518b20e3d1ace0920d",
+        "version": "cd428930a7e15a7128c11289e3f397c08ec8881e38965dead500d22296e94f27",
+        "signature": "1d5338820e2c7a3dbea9eefc917b239cf7739f33f88bb02c2d89f8e96a6dab3a",
         "affectsGlobalScope": false
       },
       "./src/commands/account/status.ts": {
-        "version": "645a23a7577ef14d059f97579e78a5487b8760b312a3895b30282758d5a6d3a7",
-        "signature": "cdbba14e549d5e7a43b0dfc690a95163cfe6f3ae75d5eed9cc4594c2197f520e",
+        "version": "11c47a7bed110dfa5199ce340a9e76952478d04407174d53dc33dc715c07619d",
+        "signature": "2cd6b6d5d92556c8505d2e60c548bc80a0439d1fe0c2c692c4ff188ae9c8495f",
         "affectsGlobalScope": false
       },
       "./src/commands/account/user.ts": {
-        "version": "75185dacaf7adaf1ca2594ab5da36d44bb73785cadb0fa95899f69b3fc1abea2",
-        "signature": "0d19469a2e29746fd48ed09d2e4816b60e5f3645a8db3d124f24f6e449591fda",
+        "version": "34b8271107c71bbc9774199bb06030a977909619d62c1cb896d0fc09865c3192",
+        "signature": "d47e652fea058feb31ca48ff8c4f1040305c21e971107ef86e873a302fcf3827",
         "affectsGlobalScope": false
       },
       "./src/commands/dns/add.ts": {
-        "version": "56d28b99340b3f649d152df36e57f591e32f594f59debae4577ff88e1a03cb2b",
-        "signature": "30797eae241285b03b5f6d68468663738ee2d527160463864bec54f78c5c4afc",
+        "version": "2596fb675745039e3c7fe583ed16ed6500ebd3cc641523bd550e24b10d5a1d2a",
+        "signature": "5548452c2ca14479f5a6e98b0e6453219de9bf3e7a51ad4917a473ead05a22c0",
         "affectsGlobalScope": false
       },
       "./src/commands/dns/index.ts": {
@@ -477,12 +477,12 @@
         "affectsGlobalScope": false
       },
       "./src/commands/meta/commands.ts": {
-        "version": "950ac963cea04f93344dd509d187aea06fe9b5926b5145c21e5072420a65d5ce",
+        "version": "0a94e78fa3be90b68c524f6e5a30a9972eeb66894f5f58b68fc38df703f63455",
         "signature": "265067664675d54ba3ce80efbf4a8242967763126ae3d260e6189aa5539e0aa4",
         "affectsGlobalScope": false
       },
       "./src/commands/meta/index.ts": {
-        "version": "0303e070fd40d60a95bd961c82438dc0f43a6121931cbe706968500b8b57fc79",
+        "version": "5a87beac4bbb882c0580461d0e330aec54fd29e78b52e1f4c7a3c7bbe697c10a",
         "signature": "2c6a7bbab895d797bd2cc4788be41f2d9d807b9ef0862d339a041320ef4fdc7c",
         "affectsGlobalScope": false
       },
@@ -1390,25 +1390,25 @@
         "./src/config.ts"
       ],
       "./src/commands/account/domain.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts"
+        "./src/base.ts"
       ],
       "./src/commands/account/index.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
       "./src/commands/account/keys.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts"
+        "./src/base.ts"
       ],
       "./src/commands/account/status.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts"
+        "./src/base.ts"
       ],
       "./src/commands/account/user.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts"
+        "./src/base.ts"
       ],
       "./src/commands/config.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
       "./src/commands/dns/add.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts"
+        "./src/base.ts"
       ],
       "./src/commands/dns/index.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
@@ -2005,32 +2005,37 @@
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
       "./src/commands/account/domain.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts",
-        "./node_modules/@oclif/parser/lib/flags.d.ts"
+        "./node_modules/@oclif/command/lib/flags.d.ts",
+        "./node_modules/@oclif/parser/lib/index.d.ts",
+        "./src/base.ts"
       ],
       "./src/commands/account/index.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
         "./node_modules/@oclif/parser/lib/flags.d.ts"
       ],
       "./src/commands/account/keys.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts",
-        "./node_modules/@oclif/parser/lib/flags.d.ts"
+        "./node_modules/@oclif/command/lib/flags.d.ts",
+        "./node_modules/@oclif/parser/lib/index.d.ts",
+        "./src/base.ts"
       ],
       "./src/commands/account/status.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts",
-        "./node_modules/@oclif/parser/lib/flags.d.ts"
+        "./node_modules/@oclif/command/lib/flags.d.ts",
+        "./node_modules/@oclif/parser/lib/index.d.ts",
+        "./src/base.ts"
       ],
       "./src/commands/account/user.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts",
-        "./node_modules/@oclif/parser/lib/flags.d.ts"
+        "./node_modules/@oclif/command/lib/flags.d.ts",
+        "./node_modules/@oclif/parser/lib/index.d.ts",
+        "./src/base.ts"
       ],
       "./src/commands/config.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
         "./node_modules/@oclif/parser/lib/flags.d.ts"
       ],
       "./src/commands/dns/add.ts": [
-        "./node_modules/@oclif/command/lib/index.d.ts",
-        "./node_modules/@oclif/parser/lib/flags.d.ts"
+        "./node_modules/@oclif/command/lib/flags.d.ts",
+        "./node_modules/@oclif/parser/lib/index.d.ts",
+        "./src/base.ts"
       ],
       "./src/commands/dns/index.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
