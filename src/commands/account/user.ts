@@ -1,4 +1,4 @@
-import {Command, flags} from '@oclif/command'
+import Command from '../../base'
 
 export default class AccountUser extends Command {
   static description = `Returns disk and bandwidth usage for all visible users.
@@ -6,13 +6,17 @@ For all visible users, this returns information on disk
 and bandwidth usage.
 `
 
+  private cmd = 'account-user_usage'
+
   static flags = {
-    help: flags.help({char: 'h'}),
+    ...Command.flags
   }
 
-  async run() {
-    // const {args, flags} = this.parse(AccountUser)
+  parse_flags() {
+    return this.parse(AccountUser)
+  }
 
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
+  get_cmd() {
+    return this.cmd
   }
 }
