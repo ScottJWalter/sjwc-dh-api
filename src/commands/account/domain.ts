@@ -1,19 +1,23 @@
-import {Command, flags} from '@oclif/command'
+import Command from '../../base'
 
-export default class AccountDomain extends Command {
+export class AccountDomain extends Command {
   static description = `Returns bandwidth usage for all visible domain services
 Bandwidth usage is counted from the beginning of the
 current billing cycle (which, itself, can be determined
 by using account:status).
 `
 
+  private cmd = 'account-domain_usage'
+
   static flags = {
-    help: flags.help({char: 'h'}),
+    ...Command.flags
   }
 
-  async run() {
-    // const {args, flags} = this.parse(AccountDomain)
+  parse_flags() {
+    return this.parse(AccountDomain)
+  }
 
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
+  get_cmd() {
+    return this.cmd
   }
 }
