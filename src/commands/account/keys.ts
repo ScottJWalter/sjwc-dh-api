@@ -1,4 +1,4 @@
-import {Command, flags} from '@oclif/command'
+import Command from '../../base'
 
 export default class AccountKeys extends Command {
   static description = `List all SSH public keys on this account.
@@ -9,13 +9,17 @@ NOTE:  If individual users have their own key(s), you
       will NOT be able to see them.
 `
 
+  private cmd = 'account-domain_usage'
+
   static flags = {
-    help: flags.help({char: 'h'}),
+    ...Command.flags
   }
 
-  async run() {
-    // const {args, flags} = this.parse(AccountKeys)
+  parse_flags() {
+    return this.parse(AccountKeys)
+  }
 
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
+  get_cmd() {
+    return this.cmd
   }
 }
