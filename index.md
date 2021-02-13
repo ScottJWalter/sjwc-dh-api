@@ -965,9 +965,6 @@ Service Control API
 ```
 USAGE
   $ dh-api services
-
-OPTIONS
-  -h, --help  show CLI help
 ```
 
 _See code: [src/commands/services/index.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/services/index.ts)_
@@ -981,9 +978,16 @@ USAGE
   $ dh-api services:fivencoder
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -a, --ab=ab            Audio bitrate
+  -a, --account=account  account to use
+  -b, --batch=batch      Set if you pass a path to a directory to convert all files.
+  -d, --dim=dim          Size of video in "400x300" format.
+  -f, --format=format    format to return
+  -n, --noemail=noemail  Send no emails at all.
+  -p, --snap=snap        Number of seconds into video to take preview snapshot.
+  -q, --quiet=quiet      Only send one email for a batch conversion.
+  -r, --ar=ar            Audio sample rate
+  -u, --url=url          Absolute URI of video or folder to convert.
 ```
 
 _See code: [src/commands/services/fivencoder.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/services/fivencoder.ts)_
@@ -997,9 +1001,9 @@ USAGE
   $ dh-api services:progress
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -a, --account=account  account to use
+  -f, --format=format    format to return
+  -t, --token=token      service token to check
 ```
 
 _See code: [src/commands/services/progress.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/services/progress.ts)_
@@ -1043,9 +1047,8 @@ USAGE
   $ dh-api user:list
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -a, --account=account  account to use
+  -f, --format=format    format to return
 ```
 
 _See code: [src/commands/user/list.ts](https://github.com/ScottJWalter/sjwc-dh-api/blob/v0.0.2/src/commands/user/list.ts)_
