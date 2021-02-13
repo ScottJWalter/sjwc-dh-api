@@ -9,7 +9,7 @@ NOTE:  If individual users have their own key(s), you
       will NOT be able to see them.
 `
 
-  private cmd = 'account-domain_usage'
+  private cmd = 'account-list_keys'
 
   static flags = {
     ...Command.flags
