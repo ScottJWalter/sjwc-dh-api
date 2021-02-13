@@ -11,15 +11,9 @@ NOTE:  If individual users have their own key(s), you
 
   private cmd = 'account-list_keys'
 
-  static flags = {
-    ...Command.flags
-  }
+  static flags = {...Command.flags}
 
-  parse_flags() {
-    return this.parse(AccountKeys)
-  }
+  parse_flags() {return this.parse(AccountKeys)}
 
-  get_cmd() {
-    return this.cmd
-  }
+  get_cmd() {return this.cmd}
 }

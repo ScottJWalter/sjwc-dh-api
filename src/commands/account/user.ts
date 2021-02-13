@@ -8,15 +8,9 @@ and bandwidth usage.
 
   private cmd = 'account-user_usage'
 
-  static flags = {
-    ...Command.flags
-  }
+  static flags = {...Command.flags}
 
-  parse_flags() {
-    return this.parse(AccountUser)
-  }
+  parse_flags() {return this.parse(AccountUser)}
 
-  get_cmd() {
-    return this.cmd
-  }
+  get_cmd() {return this.cmd}
 }

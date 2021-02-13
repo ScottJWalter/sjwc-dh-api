@@ -9,15 +9,9 @@ by using account:status).
 
   private cmd = 'account-domain_usage'
 
-  static flags = {
-    ...Command.flags
-  }
+  static flags = {...Command.flags}
 
-  parse_flags() {
-    return this.parse(AccountDomain)
-  }
+  parse_flags() {return this.parse(AccountDomain)}
 
-  get_cmd() {
-    return this.cmd
-  }
+  get_cmd() {return this.cmd}
 }

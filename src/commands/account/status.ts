@@ -7,15 +7,9 @@ Returns the current account status (billing).
 
   private cmd = 'account-status'
 
-  static flags = {
-    ...Command.flags
-  }
+  static flags = {...Command.flags}
 
-  parse_flags() {
-    return this.parse(AccountStatus)
-  }
+  parse_flags() {return this.parse(AccountStatus)}
 
-  get_cmd() {
-    return this.cmd
-  }
+  get_cmd() {return this.cmd}
 }
