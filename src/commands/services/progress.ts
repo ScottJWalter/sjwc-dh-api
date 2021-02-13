@@ -1,19 +1,16 @@
-import {Command, flags} from '@oclif/command'
+import {flags} from '@oclif/command'
+import Command from '../../base'
 
 export default class ServicesProgress extends Command {
   static description = 'services:progress'
 
+  private cmd = 'services-progress'
+
   static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
+    ...Command.flags,
+    token: flags.string({char: 't', description: 'service token to check'}),
   }
 
-  async run() {
-    // const {args, flags} = this.parse(DnsIndex)
-
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
-  }
+  parse_flags() {return this.parse(ServicesProgress)}
+  get_cmd() {return this.cmd}
 }
