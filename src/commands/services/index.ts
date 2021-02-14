@@ -1,14 +1,7 @@
-import Command from '../../base'
+import Command from '../../help'
 
 export default class ServicesIndex extends Command {
   static description = 'Service Control API'
 
   static flags = {...Command.flags}
-
-  parse_flags(): any {return {}}
-  get_cmd(): string {return ''}
-
-  async run() {
-    this.log('Services module help goes here.')
-  }
 }

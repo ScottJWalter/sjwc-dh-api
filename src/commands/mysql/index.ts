@@ -1,15 +1,7 @@
-import {Command, flags} from '@oclif/command'
+import Command from '../../help'
 
 export default class MysqlIndex extends Command {
   static description = 'MySQL API'
 
-  static flags = {
-    help: flags.help({char: 'h'}),
-  }
-
-  async run() {
-    // const {args, flags} = this.parse(DnsIndex)
-
-    this.log('MySQL module help goes here.')
-  }
+  static flags = {...Command.flags}
 }

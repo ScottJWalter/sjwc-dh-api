@@ -1,15 +1,7 @@
-import {Command, flags} from '@oclif/command'
+import Command from '../../help'
 
 export default class ListIndex extends Command {
   static description = 'Announcement List API'
 
-  static flags = {
-    help: flags.help({char: 'h'}),
-  }
-
-  async run() {
-    // const {args, flags} = this.parse(DnsIndex)
-
-    this.log('List module help goes here.')
-  }
+  static flags = {...Command.flags}
 }

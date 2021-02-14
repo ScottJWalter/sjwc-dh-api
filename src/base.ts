@@ -8,8 +8,8 @@ export default abstract class extends Command {
     format: flags.string({char: 'f', description: 'format to return', required: true, default: 'json'}),
   }
 
-  abstract parse_flags(): any
-  abstract get_cmd(): string
+  public parse_flags(): any {return {}}
+  public get_cmd(): string {return ''}
 
   async run() {
     const {flags} = this.parse_flags()
