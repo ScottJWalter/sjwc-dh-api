@@ -4,12 +4,11 @@ export default class UserIndex extends Command {
   static description = 'User API'
 
   static flags = {
-    help: flags.help({char: 'h'}),
+    ...Command.flags,
+    help: flags.help({char: 'h', description: 'this help', required: false}),
   }
 
   async run() {
-    // const {args, flags} = this.parse(DnsIndex)
-
     this.log('User module help goes here.')
   }
 }
