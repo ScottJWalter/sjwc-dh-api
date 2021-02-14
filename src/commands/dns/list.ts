@@ -4,11 +4,7 @@ export default class DnsList extends Command {
   static description = 'dns:list'
 
   static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
+    help: flags.help({char: 'h', description: 'this help', required: false}),
   }
 
   async run() {

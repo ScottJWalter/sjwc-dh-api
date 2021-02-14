@@ -5,15 +5,9 @@ export default class DnsAdd extends Command {
 
   private cmd = 'account-user_usage'
 
-  static flags = {
-    ...Command.flags
-  }
+  static flags = {...Command.flags}
 
-  parse_flags() {
-    return this.parse(DnsAdd)
-  }
+  parse_flags() {return this.parse(DnsAdd)}
 
-  get_cmd() {
-    return this.cmd
-  }
+  get_cmd() {return this.cmd}
 }

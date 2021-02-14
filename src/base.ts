@@ -4,8 +4,8 @@ import config, {stringParams, optionalParams} from './config'
 
 export default abstract class extends Command {
   static flags: optionalParams = {
-    account: flags.string({char: 'a', description: 'account to use'}),
-    format: flags.string({char: 'f', description: 'format to return'}),
+    account: flags.string({char: 'a', description: 'account to use', required: false}),
+    format: flags.string({char: 'f', description: 'format to return', required: true, default: 'json'}),
   }
 
   abstract parse_flags(): any

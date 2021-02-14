@@ -7,12 +7,10 @@ status of your account.
 `
 
   static flags = {
-    help: flags.help({char: 'h'}),
+    help: flags.help({char: 'h', description: 'this help', required: false}),
   }
 
   async run() {
-    // const {args, flags} = this.parse(AccountIndex)
-
     this.log('Account module help goes here.')
   }
 }

@@ -9,11 +9,7 @@ export class MetaKeys extends Command {
     ...Command.flags,
   }
 
-  parse_flags() {
-    return this.parse(MetaKeys)
-  }
+  parse_flags() {return this.parse(MetaKeys)}
 
-  get_cmd() {
-    return this.cmd
-  }
+  get_cmd() {return this.cmd}
 }
