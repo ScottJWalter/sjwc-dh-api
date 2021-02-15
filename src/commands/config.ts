@@ -7,7 +7,7 @@ export default class Config extends Command {
     help: flags.help({char: 'h'}),
   }
 
-  async run() {
+  async run(): Promise<void> {
     // const {args, flags} = this.parse(DnsIndex)
 
     this.log('Config module help goes here.')

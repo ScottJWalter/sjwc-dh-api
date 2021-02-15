@@ -1,19 +1,13 @@
-import {Command, flags} from '@oclif/command'
+import Command from '../../base'
 
 export default class JabberReactivate extends Command {
   static description = 'jabber:reactivate'
 
-  static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
-  }
+  protected cmd = 'jabber-'
 
-  async run() {
-    // const {args, flags} = this.parse(DnsIndex)
+  static flags = {...Command.flags}
 
-    this.log(`hello from ${__filename.replace(process.cwd(), '..')}`)
+  parse_flags(): any {
+    return this.parse(JabberReactivate)
   }
 }

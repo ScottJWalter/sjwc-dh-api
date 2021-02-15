@@ -28,7 +28,7 @@ hello world from ${__filename.replace(process.cwd(), '..')}
     },
   ]
 
-  async run() {
+  async run(): Promise<void> {
     const {args, flags} = this.parse(Hello)
 
     const name = flags.name ?? 'world'

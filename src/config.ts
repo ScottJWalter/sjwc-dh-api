@@ -1,32 +1,36 @@
+/* eslint @typescript-eslint/no-unused-vars: "off", no-unused-vars: "off" */
 import {v4 as uuidv4} from 'uuid'
 import {flags} from '@oclif/command'
 
 interface requiredParams {
-  key: flags.IOptionFlag<string>,
-  cmd: flags.IOptionFlag<string>,
-  unique_id: flags.IOptionFlag<string>,
+  key: flags.IOptionFlag<string>
+  cmd: flags.IOptionFlag<string>
+  unique_id: flags.IOptionFlag<string>
 }
 
 interface optionalParams {
-  [name: string]: flags.IOptionFlag<string | undefined>,
+  [name: string]: flags.IOptionFlag<string | undefined>
 }
 
 interface stringParams {
-  [name: string]: string | undefined,
+  [name: string]: string | undefined
 }
 
 type queryParams = requiredParams & optionalParams
 
 interface commonParams {
-  account?: flags.IOptionFlag<string | undefined>,
-  format?: flags.IOptionFlag<string | undefined>,
+  account?: flags.IOptionFlag<string | undefined>
+  format?: flags.IOptionFlag<string | undefined>
 }
 
 export {commonParams, requiredParams, optionalParams, queryParams, stringParams}
 class Config {
   private apiUrl: string
+
   public host: string
+
   private key: string
+
   private ssl: boolean
 
   constructor() {
@@ -49,7 +53,7 @@ class Config {
     let str = ''
 
     for (const [key, value] of Object.entries({...args})) {
-      let val = String(value)
+      const val = String(value)
       str += val.length > 0 ? `&${key}=${encodeURIComponent(val)}` : ''
     }
 

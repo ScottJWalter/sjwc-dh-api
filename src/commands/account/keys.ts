@@ -9,11 +9,11 @@ NOTE:  If individual users have their own key(s), you
       will NOT be able to see them.
 `
 
-  private cmd = 'account-list_keys'
+  protected cmd = 'account-list_keys'
 
   static flags = {...Command.flags}
 
-  parse_flags() {return this.parse(AccountKeys)}
-
-  get_cmd() {return this.cmd}
+  parse_flags(): any {
+    return this.parse(AccountKeys)
+  }
 }

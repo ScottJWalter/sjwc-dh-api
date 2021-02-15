@@ -6,11 +6,11 @@ For all visible users, this returns information on disk
 and bandwidth usage.
 `
 
-  private cmd = 'account-user_usage'
+  protected cmd = 'account-user_usage'
 
   static flags = {...Command.flags}
 
-  parse_flags() {return this.parse(AccountUser)}
-
-  get_cmd() {return this.cmd}
+  parse_flags(): any {
+    return this.parse(AccountUser)
+  }
 }

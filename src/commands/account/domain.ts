@@ -7,11 +7,11 @@ current billing cycle (which, itself, can be determined
 by using account:status).
 `
 
-  private cmd = 'account-domain_usage'
+  protected cmd = 'account-domain_usage'
 
   static flags = {...Command.flags}
 
-  parse_flags() {return this.parse(AccountDomain)}
-
-  get_cmd() {return this.cmd}
+  parse_flags(): any {
+    return this.parse(AccountDomain)
+  }
 }

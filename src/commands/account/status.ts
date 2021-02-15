@@ -5,11 +5,11 @@ export default class AccountStatus extends Command {
 Returns the current account status (billing).
 `
 
-  private cmd = 'account-status'
+  protected cmd = 'account-status'
 
   static flags = {...Command.flags}
 
-  parse_flags() {return this.parse(AccountStatus)}
-
-  get_cmd() {return this.cmd}
+  parse_flags(): any {
+    return this.parse(AccountStatus)
+  }
 }

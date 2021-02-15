@@ -3,17 +3,13 @@ import Command from '../../base'
 export default class UserList extends Command {
   static description = 'user:list'
 
-  private cmd = 'user-list_users'
+  protected cmd = 'user-list_users'
 
   static flags = {
-    ...Command.flags
+    ...Command.flags,
   }
 
-  parse_flags() {
+  parse_flags(): any {
     return this.parse(UserList)
-  }
-
-  get_cmd() {
-    return this.cmd
   }
 }
