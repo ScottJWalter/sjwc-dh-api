@@ -1,5 +1,5 @@
-import {flags} from '@oclif/command'
 import {v4 as uuidv4} from 'uuid'
+import {flags} from '@oclif/command'
 
 interface requiredParams {
   key: flags.IOptionFlag<string>,
@@ -27,14 +27,17 @@ class Config {
   private apiUrl: string
   public host: string
   private key: string
+  private ssl: boolean
 
   constructor() {
     if (!process.env.DREAMHOST_API_KEY) {
       throw new Error('DREAMHOST_API_KEY not defined')
     }
 
+    this.ssl = true
+
     this.host = 'api.dreamhost.com'
-    this.apiUrl = 'https://api.dreamhost.com/'
+    this.apiUrl = `${this.ssl ? 'https' : 'http'}://${this.host}/`
     this.key = String(process.env.DREAMHOST_API_KEY)
   }
 
@@ -46,7 +49,8 @@ class Config {
     let str = ''
 
     for (const [key, value] of Object.entries({...args})) {
-      str += String(value).length > 0 ? `&${key}=${encodeURIComponent(String(value))}` : ''
+      let val = String(value)
+      str += val.length > 0 ? `&${key}=${encodeURIComponent(val)}` : ''
     }
 
     return str
